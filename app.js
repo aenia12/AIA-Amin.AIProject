@@ -27,5 +27,5 @@ function findRecipe(event) {
   axios.get(apiUrl).then(displayRecipe);
 }
 
-let submitButton = document.querySelector(".btn btn-primary");
+let submitButton = document.querySelector("#recipe-search-engine");
 submitButton.addEventListener("submit", findRecipe);
