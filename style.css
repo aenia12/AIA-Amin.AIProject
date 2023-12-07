@@ -1,0 +1,17 @@
+body {
+  background-color: #f9f7fe;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+h1 {
+  padding: 20px auto;
+  text-align: center;
+}
+
+form {
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.container {
+}
