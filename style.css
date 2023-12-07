@@ -13,5 +13,14 @@ form {
   padding: 20px;
 }
 
+footer {
+  text-align: center;
+}
+
 .container {
+}
+
+.row {
+  padding: 50px auto;
+  line-height: 1.5;
 }
