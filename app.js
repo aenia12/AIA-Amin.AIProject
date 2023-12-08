@@ -3,9 +3,8 @@ function displayRecipe(response) {
 
   new Typewriter("#response", {
     strings: response.data.answer,
-    cursor: null,
     autostart: true,
-    delay: 5,
+    cursor: "",
   });
 }
 
