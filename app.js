@@ -25,7 +25,7 @@ function findRecipe(event) {
 
   recipeElement.innerHTML =
     "Generating a recipe about " +
-    instructionsInput.value +
+    instructionsInput.value.toLowerCase() +
     "! Please get ready to cook and eat 🍽️";
 
   console.log("processing AI api");
