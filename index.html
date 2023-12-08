@@ -28,10 +28,11 @@
             <form id="recipe-search-engine">
               <input
                 type="text"
-                placeholder="Look up a recipe"
+                placeholder="Pick a food item i.e. chocolate"
                 autofocus
                 required
                 autocomplete="off"
+                id="instructions"
               />
               <input
                 type="submit"
@@ -46,9 +47,7 @@
       <br />
       <div class="row">
         <div class="col text-center">
-          <div class="answer" id="response">
-            <br />
-          </div>
+          <div class="recipe hidden" id="response"></div>
         </div>
       </div>
       <br />

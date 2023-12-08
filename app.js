@@ -12,18 +12,24 @@ function displayRecipe(response) {
 function findRecipe(event) {
   event.preventDefault();
 
+  let instructionsInput = document.querySelector("#instructions");
   let apiKey = "2046c535afeb092fo82f1d306d8a2b2t";
   let context =
-    "Your are a talented AI assistant who loves to cook and learn about recipes worldwide. The recipe must be provided in HTML format. Example: <p>this is a recipe</p>";
-  let prompt = "Generate a recipe.";
+    "Your are a talented AI assistant who loves to cook and learn about recipes worldwide. Your job is to generate a recipe in basic HTML format and each line must be separated by a <br />. Follow user instructions. Sign the recipe with 'SheCodes AI' inside a <strong> element at the end of the recipe and NOT at the beginning";
+  let prompt =
+    "User instructions: Please generate a recipe about" +
+    instructionsInput.value;
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
-  let responseElement = document.querySelector("#response");
+  let recipeElement = document.querySelector("#response");
+  recipeElement.classList.remove("hidden");
 
-  responseElement.innerHTML =
-    "Generating a recipe... Please get ready to cook and eat 🍽️ ";
+  recipeElement.innerHTML =
+    "Generating a recipe about " +
+    instructionsInput.value +
+    "! Please get ready to cook and eat 🍽️";
 
-  console.log("called the AI api");
+  console.log("processing AI api");
   axios.get(apiUrl).then(displayRecipe);
 }
 
