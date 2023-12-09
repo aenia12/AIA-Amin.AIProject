@@ -1,8 +1,10 @@
 function displayRecipe(response) {
+  const responseElement = document.querySelector("#response");
+  responseElement.innerHTML = ""; // Clear any existing content
   console.log(response.data.answer);
 
-  new Typewriter("#response", {
-    strings: response.data.answer,
+  new Typewriter(responseElement, {
+    strings: [response.data.answer],
     autostart: true,
     delay: 1,
     cursor: "",
