@@ -4,6 +4,7 @@ function displayRecipe(response) {
   new Typewriter("#response", {
     strings: response.data.answer,
     autostart: true,
+    delay: 1,
     cursor: "",
   });
 }
