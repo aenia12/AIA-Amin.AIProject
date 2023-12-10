@@ -3,13 +3,6 @@ function displayRecipe(response) {
 
   let recipeElement = document.querySelector("#response");
   recipeElement.innerHTML = response.data.answer;
-
-  // new Typewriter("#response", {
-  //  strings: response.data.answer,
-  //  autostart: true,
-  //  delay: 1,
-  //  cursor: "",
-  // });
 }
 
 //function displayRecipe(response) {
@@ -44,6 +37,16 @@ function findRecipe(event) {
     "Generating a recipe about " +
     instructionsInput.value.toLowerCase() +
     "! Please get ready to cook and eat 🍽️";
+
+  //new Typewriter("#response", {
+  //strings:
+  //"Generating a recipe about " +
+  //instructionsInput.value.toLowerCase() +
+  //"! Please get ready to cook and eat 🍽️",
+  //autostart: true,
+  //delay: 1,
+  //cursor: "",
+  //});
 
   console.log("processing AI api");
   axios.get(apiUrl).then(displayRecipe);
