@@ -22,7 +22,7 @@ function findRecipe(event) {
   event.preventDefault();
 
   let instructionsInput = document.querySelector("#instructions");
-  let apiKey = "2046c535afeb092fo82f1d306d8a2b2t";
+  let apiKey = "6a9f30b4789fac54069af012tof0d950";
   let context =
     "Your are a talented AI assistant who loves to cook and learn about recipes worldwide. Your job is to generate a recipe in basic HTML format and each line must be separated by a <br />. Follow user instructions. Sign the recipe with 'SheCodes AI' inside a <strong> element at the end of the recipe and NOT at the beginning";
   let prompt =
