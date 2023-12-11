@@ -1,22 +1,22 @@
-function displayRecipe(response) {
-  console.log(response.data.answer);
-
-  let recipeElement = document.querySelector("#response");
-  recipeElement.innerHTML = response.data.answer;
-}
-
 //function displayRecipe(response) {
-//const responseElement = document.querySelector("#response");
-//responseElement.innerHTML = ""; // Clear any existing content
 //console.log(response.data.answer);
 
-//new Typewriter(responseElement, {
-//strings: [response.data.answer],
-//autostart: true,
-//delay: 1,
-//cursor: "",
-// });
+//let recipeElement = document.querySelector("#response");
+//recipeElement.innerHTML = response.data.answer;
 //}
+
+function displayRecipe(response) {
+  const responseElement = document.querySelector("#response");
+  responseElement.innerHTML = ""; // Clear any existing content
+  console.log(response.data.answer);
+
+  new Typewriter(responseElement, {
+    strings: [response.data.answer],
+    autostart: true,
+    delay: 1,
+    cursor: "",
+  });
+}
 
 function findRecipe(event) {
   event.preventDefault();
