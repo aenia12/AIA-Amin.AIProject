@@ -1,6 +1,4 @@
 function displayRecipe(response) {
-  console.log(response.data.answer);
-
   let recipeElement = document.querySelector("#response");
   recipeElement.innerHTML = response.data.answer;
 }
@@ -48,7 +46,6 @@ function findRecipe(event) {
   //cursor: "",
   //});
 
-  console.log("processing AI api");
   axios.get(apiUrl).then(displayRecipe);
 }
 
